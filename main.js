@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const iconoMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const carritoIcono = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 
@@ -12,19 +12,19 @@ iconoMenu.addEventListener('click', toggleMobileMenu);
 carritoIcono.addEventListener('click', toggleProductDetail)
 
 function toggleDesktopMenu() {
-    const isAsideClose = aside.classList.contains('inactive');
+    const isshoppingCartContainerClose = shoppingCartContainer.classList.contains('inactive');
 
-    if (!isAsideClose) {
-        aside.classList.add('inactive');
+    if (!isshoppingCartContainerClose) {
+        shoppingCartContainer.classList.add('inactive');
     }
    
     desktopMenu.classList.toggle('inactive');
 }
 function toggleMobileMenu() {
-    const isAsideClose = aside.classList.contains('inactive');
+    const isshoppingCartContainerClose = shoppingCartContainer.classList.contains('inactive');
 
-    if (!isAsideClose) {
-        aside.classList.add('inactive');
+    if (!isshoppingCartContainerClose) {
+        shoppingCartContainer.classList.add('inactive');
     }
    
     mobileMenu.classList.toggle('inactive');
@@ -36,7 +36,7 @@ function toggleProductDetail() {
         mobileMenu.classList.add('inactive');
     }
    
-    aside.classList.toggle('inactive');
+    shoppingCartContainer.classList.toggle('inactive');
 }
 
 const productList = [];
@@ -63,11 +63,6 @@ productList.push({
 productList.push({
     name:'Pantalla',
     price:220,
-    image:'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
-productList.push({
-    name:'Compu',
-    price:620,
     image:'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
 
